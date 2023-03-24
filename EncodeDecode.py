@@ -26,6 +26,8 @@ encode_table['\n'] = '\n'
 for i in encode_table.keys():
     encode_table[i] = chr(ord(encode_table[i]) + 10)
 encode_table[''] = ''
+encode_table['\"'] = '\"'
+encode_table['-'] = '-'
 
 decode_table = {}
 for k, v in encode_table.items():
